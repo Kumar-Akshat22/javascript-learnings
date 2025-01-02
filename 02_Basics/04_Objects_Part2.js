@@ -38,7 +38,7 @@ const obj3 = Object.assign({} , obj1 , obj2 , obj4);
 
 // A more modern and easy way to combine objects -> Use spread (...) operator
 const res = {...obj1 , ...obj2 , ...obj3}
-console.log(res);
+// console.log(res);
 
 // Usually, when dealing with DB we get an array of objects
 const users = [
@@ -65,12 +65,26 @@ const users = [
 ]
 
 // Some useful methods for Object
-console.log(Object.keys(valoUser)); // The datatype of the output is an array
+// console.log(Object.keys(valoUser)); // The datatype of the output is an array
 
-console.log(Object.values(valoUser));
+// console.log(Object.values(valoUser));
 
-console.log(Object.entries(valoUser));
+// console.log(Object.entries(valoUser));
 
 // Check whether the object contains a particular property or not
-console.log(valoUser.hasOwnProperty('isLoggedin')); // 1st way
-console.log(Object.hasOwn(valoUser , 'isLoggedIn')); // 2nd way
+// console.log(valoUser.hasOwnProperty('isLoggedin')); // 1st way
+// console.log(Object.hasOwn(valoUser , 'isLoggedIn')); // 2nd way
+
+// Destructuring in an Object
+const course = {
+
+    courseName: "Singing",
+    price: "999",
+    instructor: "Akshat",
+}
+
+// const {courseName} = course
+
+// Giving the key a specific name while destructuring
+const {courseName: courseTitle} = course
+console.log(courseTitle);
