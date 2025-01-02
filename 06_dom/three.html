@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Creating elements using JavaScript</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+
+    // Creating a new HTML element using JavaScript
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title" , "myTitle")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px";
+
+    // One way to add text inside the child
+    // div.innerText = "Akshat is an aspiring SDE"
+    
+    // Better way to do the above 
+    const addText = document.createTextNode("Akshat is an aspiring SDE")
+    div.appendChild(addText);
+
+    document.body.appendChild(div);
+
+</script>
+</html>
